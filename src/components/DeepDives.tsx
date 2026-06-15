@@ -453,10 +453,10 @@ export const DeepDives: React.FC = () => {
           style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
         >
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
+            <div className="deepdive-profile-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
               <div>
                 <span className="label-meta">Competitor Profile // Rank {activeComp.rank}</span>
-                <h3 className="title-medium" style={{ fontSize: '2.5rem', marginTop: '0.5rem' }}>{activeComp.name}</h3>
+                <h3 className="title-medium deepdive-profile-title" style={{ fontSize: '2.5rem', marginTop: '0.5rem' }}>{activeComp.name}</h3>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.4rem' }}>
                 <span className="badge-threat very-high" style={{ 

@@ -318,7 +318,7 @@ export const AdditionalImprovements: React.FC = () => {
         <AlertCircle size={22} className="icon-accent" /> Strategic Opportunity Audit
       </h3>
       
-      <div style={{ overflowX: 'auto', border: '1px solid var(--border)', borderRadius: '6px' }}>
+      <div className="opportunity-table-wrap" style={{ overflowX: 'auto', border: '1px solid var(--border)', borderRadius: '6px' }}>
         <table style={{ 
           width: '100%', 
           borderCollapse: 'collapse', 

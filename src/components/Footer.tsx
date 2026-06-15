@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div>
-          <div style={{ 
+          <div className="footer-sources-grid" style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', 
             gap: '1.25rem 2rem' 

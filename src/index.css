@@ -759,3 +759,124 @@ p {
     transform: rotate(360deg);
   }
 }
+
+/* ===== COMPREHENSIVE MOBILE RESPONSIVE FIXES ===== */
+
+/* Nuclear overflow prevention on all containers */
+.magazine-container,
+.magazine-container * {
+  max-width: 100%;
+}
+
+/* Magazine header: stack vertically on mobile */
+@media (max-width: 768px) {
+  .magazine-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+  .magazine-header > div:nth-child(2) {
+    align-self: flex-start;
+  }
+}
+
+/* All auto-fit grids: force single column on narrow screens */
+@media (max-width: 600px) {
+  /* Methodology cards, keyword clusters, page concepts, journal topics, footer sources */
+  [style*="repeat(auto-fit"],
+  [style*="repeat(auto-fill"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Deep Dive profile header: stack on mobile */
+@media (max-width: 768px) {
+  .deepdive-profile-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem;
+  }
+  .deepdive-profile-header > div:last-child {
+    align-items: flex-start !important;
+  }
+  .deepdive-profile-title {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Roadmap step grid: full single-column stacking on mobile with left border accent */
+@media (max-width: 768px) {
+  .roadmap-step-grid {
+    padding: 1.5rem 1rem;
+  }
+  .roadmap-step-grid > div:last-child {
+    border-left: none !important;
+    padding-left: 0 !important;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Opportunity audit table: allow horizontal scroll with visible hint */
+@media (max-width: 768px) {
+  .opportunity-table-wrap {
+    -webkit-overflow-scrolling: touch;
+    border-radius: 6px;
+  }
+  .opportunity-table-wrap table {
+    min-width: 700px !important;
+  }
+  .opportunity-table-wrap th,
+  .opportunity-table-wrap td {
+    padding: 1rem 0.75rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Footer source grid: single column on narrow phones */
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .footer-sources-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Pull quote: reduce padding/size on mobile */
+@media (max-width: 600px) {
+  .pull-quote {
+    font-size: 1.15rem;
+    padding-left: 1rem;
+  }
+  .title-large {
+    font-size: clamp(2rem, 10vw, 3.5rem) !important;
+  }
+}
+
+/* Browser mockup slider navigation: smaller on mobile */
+@media (max-width: 480px) {
+  .browser-content {
+    height: 220px;
+  }
+  .browser-mockup:hover .browser-screenshot-img {
+    transform: translateY(calc(-100% + 220px));
+  }
+  .browser-header {
+    padding: 0.4rem 0.5rem;
+  }
+  .browser-address-bar {
+    margin: 0 0.5rem;
+    font-size: 0.65rem;
+  }
+}
+
+/* Ensure code/keyword tags wrap properly */
+@media (max-width: 600px) {
+  code {
+    word-break: break-all;
+  }
+}
