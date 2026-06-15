@@ -4,27 +4,27 @@ import { competitors } from '../data/competitorData';
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import all subpage screenshots
-import burbeck_home from '../assets/screenshots/burbeck_home.png';
-import burbeck_staging from '../assets/screenshots/burbeck_staging.png';
-import burbeck_journal from '../assets/screenshots/burbeck_journal.png';
-import ljinteriors_home from '../assets/screenshots/ljinteriors_home.png';
-import ljinteriors_staging from '../assets/screenshots/ljinteriors_staging.png';
-import boxnine7_home from '../assets/screenshots/boxnine7_home.png';
-import boxnine7_staging from '../assets/screenshots/boxnine7_staging.png';
-import featherington_home from '../assets/screenshots/featherington_home.png';
-import featherington_areas from '../assets/screenshots/featherington_areas.png';
-import featherington_blog from '../assets/screenshots/featherington_blog.png';
-import homestaginglondon_home from '../assets/screenshots/homestaginglondon_home.png';
-import homestaginglondon_projects from '../assets/screenshots/homestaginglondon_projects.png';
-import dressed2sell_home from '../assets/screenshots/dressed2sell_home.png';
-import cullumdesign_home from '../assets/screenshots/cullumdesign_home.png';
-import cullumdesign_contact from '../assets/screenshots/cullumdesign_contact.png';
-import londonpropertystaging_home from '../assets/screenshots/londonpropertystaging_home.png';
-import londonpropertystaging_about from '../assets/screenshots/londonpropertystaging_about.png';
-import louisajane_home from '../assets/screenshots/louisajane_home.png';
-import louisajane_story from '../assets/screenshots/louisajane_story.png';
-import thefinaltouch_home from '../assets/screenshots/thefinaltouch_home.png';
-import thefinaltouch_press from '../assets/screenshots/thefinaltouch_press.png';
+import burbeck_home from '../assets/screenshots/burbeck_home.webp';
+import burbeck_staging from '../assets/screenshots/burbeck_staging.webp';
+import burbeck_journal from '../assets/screenshots/burbeck_journal.webp';
+import ljinteriors_home from '../assets/screenshots/ljinteriors_home.webp';
+import ljinteriors_staging from '../assets/screenshots/ljinteriors_staging.webp';
+import boxnine7_home from '../assets/screenshots/boxnine7_home.webp';
+import boxnine7_staging from '../assets/screenshots/boxnine7_staging.webp';
+import featherington_home from '../assets/screenshots/featherington_home.webp';
+import featherington_areas from '../assets/screenshots/featherington_areas.webp';
+import featherington_blog from '../assets/screenshots/featherington_blog.webp';
+import homestaginglondon_home from '../assets/screenshots/homestaginglondon_home.webp';
+import homestaginglondon_projects from '../assets/screenshots/homestaginglondon_projects.webp';
+import dressed2sell_home from '../assets/screenshots/dressed2sell_home.webp';
+import cullumdesign_home from '../assets/screenshots/cullumdesign_home.webp';
+import cullumdesign_contact from '../assets/screenshots/cullumdesign_contact.webp';
+import londonpropertystaging_home from '../assets/screenshots/londonpropertystaging_home.webp';
+import londonpropertystaging_about from '../assets/screenshots/londonpropertystaging_about.webp';
+import louisajane_home from '../assets/screenshots/louisajane_home.webp';
+import louisajane_story from '../assets/screenshots/louisajane_story.webp';
+import thefinaltouch_home from '../assets/screenshots/thefinaltouch_home.webp';
+import thefinaltouch_press from '../assets/screenshots/thefinaltouch_press.webp';
 
 const screenshotMap: Record<string, string> = {
   burbeck_home,
