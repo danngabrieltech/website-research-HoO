@@ -3,51 +3,138 @@ import { motion } from 'framer-motion';
 import { competitors } from '../data/competitorData';
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Import all subpage screenshots
+// Import all subpage screenshots (WebP)
+// Burbeck
 import burbeck_home from '../assets/screenshots/burbeck_home.webp';
 import burbeck_staging from '../assets/screenshots/burbeck_staging.webp';
+import burbeck_show_home from '../assets/screenshots/burbeck_show_home.webp';
+import burbeck_portfolio from '../assets/screenshots/burbeck_portfolio.webp';
 import burbeck_journal from '../assets/screenshots/burbeck_journal.webp';
+import burbeck_contact from '../assets/screenshots/burbeck_contact.webp';
+
+// LJ Interiors
 import ljinteriors_home from '../assets/screenshots/ljinteriors_home.webp';
 import ljinteriors_staging from '../assets/screenshots/ljinteriors_staging.webp';
+import ljinteriors_furniture from '../assets/screenshots/ljinteriors_furniture.webp';
+import ljinteriors_portfolio from '../assets/screenshots/ljinteriors_portfolio.webp';
+import ljinteriors_journal from '../assets/screenshots/ljinteriors_journal.webp';
+import ljinteriors_contact from '../assets/screenshots/ljinteriors_contact.webp';
+
+// BoxNine7
 import boxnine7_home from '../assets/screenshots/boxnine7_home.webp';
 import boxnine7_staging from '../assets/screenshots/boxnine7_staging.webp';
+import boxnine7_furniture from '../assets/screenshots/boxnine7_furniture.webp';
+import boxnine7_bcorp from '../assets/screenshots/boxnine7_bcorp.webp';
+import boxnine7_contact from '../assets/screenshots/boxnine7_contact.webp';
+
+// Featherington
 import featherington_home from '../assets/screenshots/featherington_home.webp';
 import featherington_areas from '../assets/screenshots/featherington_areas.webp';
 import featherington_blog from '../assets/screenshots/featherington_blog.webp';
+import featherington_pricing from '../assets/screenshots/featherington_pricing.webp';
+import featherington_calculator from '../assets/screenshots/featherington_calculator.webp';
+import featherington_quote from '../assets/screenshots/featherington_quote.webp';
+
+// Home Staging London
 import homestaginglondon_home from '../assets/screenshots/homestaginglondon_home.webp';
 import homestaginglondon_projects from '../assets/screenshots/homestaginglondon_projects.webp';
+import homestaginglondon_services from '../assets/screenshots/homestaginglondon_services.webp';
+import homestaginglondon_refurbishment from '../assets/screenshots/homestaginglondon_refurbishment.webp';
+import homestaginglondon_contact from '../assets/screenshots/homestaginglondon_contact.webp';
+
+// Dressed2Sell
 import dressed2sell_home from '../assets/screenshots/dressed2sell_home.webp';
+import dressed2sell_about from '../assets/screenshots/dressed2sell_about.webp';
+import dressed2sell_gallery from '../assets/screenshots/dressed2sell_gallery.webp';
+import dressed2sell_testimonials from '../assets/screenshots/dressed2sell_testimonials.webp';
+import dressed2sell_contact from '../assets/screenshots/dressed2sell_contact.webp';
+
+// Cullum Design
 import cullumdesign_home from '../assets/screenshots/cullumdesign_home.webp';
+import cullumdesign_staging from '../assets/screenshots/cullumdesign_staging.webp';
+import cullumdesign_interior from '../assets/screenshots/cullumdesign_interior.webp';
+import cullumdesign_rental from '../assets/screenshots/cullumdesign_rental.webp';
 import cullumdesign_contact from '../assets/screenshots/cullumdesign_contact.webp';
+
+// London Property Staging
 import londonpropertystaging_home from '../assets/screenshots/londonpropertystaging_home.webp';
 import londonpropertystaging_about from '../assets/screenshots/londonpropertystaging_about.webp';
+import londonpropertystaging_services from '../assets/screenshots/londonpropertystaging_services.webp';
+import londonpropertystaging_projects from '../assets/screenshots/londonpropertystaging_projects.webp';
+import londonpropertystaging_pricing from '../assets/screenshots/londonpropertystaging_pricing.webp';
+import londonpropertystaging_contact from '../assets/screenshots/londonpropertystaging_contact.webp';
+
+// Louisa Jane
 import louisajane_home from '../assets/screenshots/louisajane_home.webp';
 import louisajane_story from '../assets/screenshots/louisajane_story.webp';
+import louisajane_projects from '../assets/screenshots/louisajane_projects.webp';
+import louisajane_staging from '../assets/screenshots/louisajane_staging.webp';
+import louisajane_contact from '../assets/screenshots/louisajane_contact.webp';
+
+// The Final Touch
 import thefinaltouch_home from '../assets/screenshots/thefinaltouch_home.webp';
 import thefinaltouch_press from '../assets/screenshots/thefinaltouch_press.webp';
+import thefinaltouch_services from '../assets/screenshots/thefinaltouch_services.webp';
+import thefinaltouch_about from '../assets/screenshots/thefinaltouch_about.webp';
+import thefinaltouch_before_after from '../assets/screenshots/thefinaltouch_before_after.webp';
+import thefinaltouch_contact from '../assets/screenshots/thefinaltouch_contact.webp';
 
 const screenshotMap: Record<string, string> = {
   burbeck_home,
   burbeck_staging,
+  burbeck_show_home,
+  burbeck_portfolio,
   burbeck_journal,
+  burbeck_contact,
   ljinteriors_home,
   ljinteriors_staging,
+  ljinteriors_furniture,
+  ljinteriors_portfolio,
+  ljinteriors_journal,
+  ljinteriors_contact,
   boxnine7_home,
   boxnine7_staging,
+  boxnine7_furniture,
+  boxnine7_bcorp,
+  boxnine7_contact,
   featherington_home,
   featherington_areas,
   featherington_blog,
+  featherington_pricing,
+  featherington_calculator,
+  featherington_quote,
   homestaginglondon_home,
   homestaginglondon_projects,
+  homestaginglondon_services,
+  homestaginglondon_refurbishment,
+  homestaginglondon_contact,
   dressed2sell_home,
+  dressed2sell_about,
+  dressed2sell_gallery,
+  dressed2sell_testimonials,
+  dressed2sell_contact,
   cullumdesign_home,
+  cullumdesign_staging,
+  cullumdesign_interior,
+  cullumdesign_rental,
   cullumdesign_contact,
   londonpropertystaging_home,
   londonpropertystaging_about,
+  londonpropertystaging_services,
+  londonpropertystaging_projects,
+  londonpropertystaging_pricing,
+  londonpropertystaging_contact,
   louisajane_home,
   louisajane_story,
+  louisajane_projects,
+  louisajane_staging,
+  louisajane_contact,
   thefinaltouch_home,
-  thefinaltouch_press
+  thefinaltouch_press,
+  thefinaltouch_services,
+  thefinaltouch_about,
+  thefinaltouch_before_after,
+  thefinaltouch_contact
 };
 
 interface PageScreenshot {
@@ -60,43 +147,77 @@ const competitorPages: Record<string, PageScreenshot[]> = {
   burbeck: [
     { label: "Homepage", id: "burbeck_home", url: "https://burbeckinteriors.com/" },
     { label: "Home Staging", id: "burbeck_staging", url: "https://burbeckinteriors.com/home-staging" },
-    { label: "Journal", id: "burbeck_journal", url: "https://burbeckinteriors.com/journal" }
+    { label: "Show Homes", id: "burbeck_show_home", url: "https://burbeckinteriors.com/show-home-styling" },
+    { label: "Portfolio", id: "burbeck_portfolio", url: "https://burbeckinteriors.com/portfolio" },
+    { label: "Journal", id: "burbeck_journal", url: "https://burbeckinteriors.com/journal" },
+    { label: "Contact", id: "burbeck_contact", url: "https://burbeckinteriors.com/contact" }
   ],
   ljinteriors: [
     { label: "Homepage", id: "ljinteriors_home", url: "https://ljinteriordesign.co.uk/" },
-    { label: "Home Staging", id: "ljinteriors_staging", url: "https://ljinteriordesign.co.uk/home-staging/" }
+    { label: "Home Staging", id: "ljinteriors_staging", url: "https://ljinteriordesign.co.uk/home-staging/" },
+    { label: "Furniture Packs", id: "ljinteriors_furniture", url: "https://ljinteriordesign.co.uk/furniture-packages/" },
+    { label: "Portfolio", id: "ljinteriors_portfolio", url: "https://ljinteriordesign.co.uk/portfolio-luxury-property-styling/" },
+    { label: "Journal", id: "ljinteriors_journal", url: "https://ljinteriordesign.co.uk/journal-interior-design/" },
+    { label: "Contact", id: "ljinteriors_contact", url: "https://ljinteriordesign.co.uk/contact-us/" }
   ],
   boxnine7: [
     { label: "Homepage", id: "boxnine7_home", url: "https://www.boxnine7.com/" },
-    { label: "Home Staging Company", id: "boxnine7_staging", url: "https://www.boxnine7.com/home-staging-company" }
+    { label: "Home Staging", id: "boxnine7_staging", url: "https://www.boxnine7.com/home-staging-company" },
+    { label: "Furniture Packs", id: "boxnine7_furniture", url: "https://www.boxnine7.com/curated-furniture-packages-service" },
+    { label: "B Corp Status", id: "boxnine7_bcorp", url: "https://www.boxnine7.com/b-corp-force-for-good" },
+    { label: "Contact", id: "boxnine7_contact", url: "https://www.boxnine7.com/get-in-touch" }
   ],
   featherington: [
     { label: "Homepage", id: "featherington_home", url: "https://www.featheringtoninteriors.com/" },
     { label: "Service Areas", id: "featherington_areas", url: "https://www.featheringtoninteriors.com/home-staging-areas-we-serve" },
-    { label: "Blog", id: "featherington_blog", url: "https://www.featheringtoninteriors.com/blog" }
+    { label: "Blog", id: "featherington_blog", url: "https://www.featheringtoninteriors.com/blog" },
+    { label: "Pricing Packages", id: "featherington_pricing", url: "https://www.featheringtoninteriors.com/property-staging-pricing-packages" },
+    { label: "ROI Calculator", id: "featherington_calculator", url: "https://www.featheringtoninteriors.com/free-uk-home-staging-calculator" },
+    { label: "Get Quote", id: "featherington_quote", url: "https://www.featheringtoninteriors.com/request-a-home-staging-quote" }
   ],
   homestaginglondon: [
     { label: "Homepage", id: "homestaginglondon_home", url: "https://www.homestaginglondon.co.uk/" },
-    { label: "Projects", id: "homestaginglondon_projects", url: "https://www.homestaginglondon.co.uk/projects" }
+    { label: "Projects", id: "homestaginglondon_projects", url: "https://www.homestaginglondon.co.uk/projects" },
+    { label: "Services", id: "homestaginglondon_services", url: "https://www.homestaginglondon.co.uk/services-1" },
+    { label: "Refurbishment", id: "homestaginglondon_refurbishment", url: "https://www.homestaginglondon.co.uk/refurbishment-maintenance" },
+    { label: "Contact", id: "homestaginglondon_contact", url: "https://www.homestaginglondon.co.uk/contact" }
   ],
   dressed2sell: [
-    { label: "Homepage", id: "dressed2sell_home", url: "https://dressed2sell.co.uk/" }
+    { label: "Homepage", id: "dressed2sell_home", url: "https://dressed2sell.co.uk/" },
+    { label: "About", id: "dressed2sell_about", url: "https://dressed2sell.co.uk/about" },
+    { label: "Gallery", id: "dressed2sell_gallery", url: "https://dressed2sell.co.uk/gallery" },
+    { label: "Testimonials", id: "dressed2sell_testimonials", url: "https://dressed2sell.co.uk/testimonials" },
+    { label: "Contact", id: "dressed2sell_contact", url: "https://dressed2sell.co.uk/contact" }
   ],
   cullumdesign: [
     { label: "Homepage", id: "cullumdesign_home", url: "https://cullum-design.com/" },
+    { label: "Home Staging", id: "cullumdesign_staging", url: "https://cullum-design.com/home-staging-london/" },
+    { label: "Interior Design", id: "cullumdesign_interior", url: "https://cullum-design.com/interior-design-services/" },
+    { label: "Furniture Rental", id: "cullumdesign_rental", url: "https://cullum-design.com/furniture-rental-for-tenants/" },
     { label: "Contact", id: "cullumdesign_contact", url: "https://cullum-design.com/contact/" }
   ],
   londonpropertystaging: [
     { label: "Homepage", id: "londonpropertystaging_home", url: "https://www.londonpropertystaging.com/" },
-    { label: "About Us", id: "londonpropertystaging_about", url: "https://www.londonpropertystaging.com/about" }
+    { label: "About Us", id: "londonpropertystaging_about", url: "https://www.londonpropertystaging.com/about" },
+    { label: "Services", id: "londonpropertystaging_services", url: "https://www.londonpropertystaging.com/services" },
+    { label: "Projects", id: "londonpropertystaging_projects", url: "https://www.londonpropertystaging.com/projects" },
+    { label: "Pricing", id: "londonpropertystaging_pricing", url: "https://www.londonpropertystaging.com/pricing" },
+    { label: "Contact", id: "londonpropertystaging_contact", url: "https://www.londonpropertystaging.com/contact" }
   ],
   louisajane: [
     { label: "Homepage", id: "louisajane_home", url: "https://louisajaneinteriors.com/" },
-    { label: "Our Story", id: "louisajane_story", url: "https://louisajaneinteriors.com/our-story/" }
+    { label: "Our Story", id: "louisajane_story", url: "https://louisajaneinteriors.com/our-story/" },
+    { label: "Projects", id: "louisajane_projects", url: "https://louisajaneinteriors.com/projects/" },
+    { label: "Home Staging", id: "louisajane_staging", url: "https://louisajaneinteriors.com/home-staging/" },
+    { label: "Contact", id: "louisajane_contact", url: "https://louisajaneinteriors.com/contact/" }
   ],
   thefinaltouch: [
     { label: "Homepage", id: "thefinaltouch_home", url: "https://www.thefinaltouch.co.uk/" },
-    { label: "Press", id: "thefinaltouch_press", url: "https://www.thefinaltouch.co.uk/in-the-press" }
+    { label: "Press", id: "thefinaltouch_press", url: "https://www.thefinaltouch.co.uk/in-the-press" },
+    { label: "Services", id: "thefinaltouch_services", url: "https://www.thefinaltouch.co.uk/selling-property-services" },
+    { label: "About", id: "thefinaltouch_about", url: "https://www.thefinaltouch.co.uk/the-final-touch" },
+    { label: "Before & After", id: "thefinaltouch_before_after", url: "https://www.thefinaltouch.co.uk/before-and-after-property-update" },
+    { label: "Contact", id: "thefinaltouch_contact", url: "https://www.thefinaltouch.co.uk/contact-homestaging" }
   ]
 };
 
