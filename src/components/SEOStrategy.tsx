@@ -17,7 +17,7 @@ export const SEOStrategy: React.FC = () => {
         <Target size={22} className="icon-accent" /> Keyword Opportunity Matrix
       </h3>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
+      <div className="grid-keywords" style={{ marginBottom: '5rem' }}>
         {keywordOpportunities.map((group, index) => (
           <motion.div
             key={index}

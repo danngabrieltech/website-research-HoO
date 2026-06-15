@@ -48,11 +48,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div>
-          <div className="footer-sources-grid" style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', 
-            gap: '1.25rem 2rem' 
-          }}>
+          <div className="grid-footer-sources">
             {sources.map(src => (
               <a 
                 key={src.id}

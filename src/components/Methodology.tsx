@@ -20,7 +20,7 @@ export const Methodology: React.FC = () => {
         Competitors were evaluated by directional threat level to House of ONO, combining technical search visibility, brand differentiation, visual authority, social media presence, and direct service overlap.
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '2rem' }}>
+      <div className="grid-methodology">
         {rankingCriteria.map((criterion, index) => (
           <motion.div
             key={index}

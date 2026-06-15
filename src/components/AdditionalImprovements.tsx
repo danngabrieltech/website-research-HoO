@@ -222,7 +222,7 @@ export const AdditionalImprovements: React.FC = () => {
         <MapPin size={22} className="icon-accent" /> Priority Landing Page Concepts
       </h3>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '5rem' }}>
+      <div className="grid-page-concepts" style={{ marginBottom: '5rem' }}>
         {pageConcepts.map((item, idx) => (
           <motion.div
             key={idx}
@@ -273,7 +273,7 @@ export const AdditionalImprovements: React.FC = () => {
         <BookOpen size={22} className="icon-accent" /> Recommended SEO Journal Topics
       </h3>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem', marginBottom: '5rem' }}>
+      <div className="grid-journal-topics" style={{ marginBottom: '5rem' }}>
         {journalTopics.map((item, idx) => (
           <motion.div
             key={idx}

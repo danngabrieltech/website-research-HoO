@@ -762,10 +762,52 @@ p {
 
 /* ===== COMPREHENSIVE MOBILE RESPONSIVE FIXES ===== */
 
-/* Nuclear overflow prevention on all containers */
-.magazine-container,
-.magazine-container * {
-  max-width: 100%;
+/* Global overflow prevention */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Named responsive grid classes used by components */
+.grid-methodology {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.grid-keywords {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.grid-page-concepts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-journal-topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-footer-sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem 2rem;
+}
+
+/* Force ALL named grids to single column on mobile */
+@media (max-width: 768px) {
+  .grid-methodology,
+  .grid-keywords,
+  .grid-page-concepts,
+  .grid-journal-topics,
+  .grid-footer-sources {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Magazine header: stack vertically on mobile */
@@ -781,14 +823,7 @@ p {
   }
 }
 
-/* All auto-fit grids: force single column on narrow screens */
-@media (max-width: 600px) {
-  /* Methodology cards, keyword clusters, page concepts, journal topics, footer sources */
-  [style*="repeat(auto-fit"],
-  [style*="repeat(auto-fill"] {
-    grid-template-columns: 1fr !important;
-  }
-}
+/* Hero grids: already handled by .hero-header-grid / .hero-baseline-grid at 1024px */
 
 /* Deep Dive profile header: stack on mobile */
 @media (max-width: 768px) {
@@ -805,7 +840,7 @@ p {
   }
 }
 
-/* Roadmap step grid: full single-column stacking on mobile with left border accent */
+/* Roadmap step grid on mobile */
 @media (max-width: 768px) {
   .roadmap-step-grid {
     padding: 1.5rem 1rem;
@@ -819,14 +854,14 @@ p {
   }
 }
 
-/* Opportunity audit table: allow horizontal scroll with visible hint */
+/* Opportunity audit table on mobile */
 @media (max-width: 768px) {
   .opportunity-table-wrap {
     -webkit-overflow-scrolling: touch;
     border-radius: 6px;
   }
   .opportunity-table-wrap table {
-    min-width: 700px !important;
+    min-width: 700px;
   }
   .opportunity-table-wrap th,
   .opportunity-table-wrap td {
@@ -835,29 +870,46 @@ p {
   }
 }
 
-/* Footer source grid: single column on narrow phones */
-@media (max-width: 600px) {
+/* Footer grid: single column on mobile */
+@media (max-width: 768px) {
   .footer-grid {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-  }
-  .footer-sources-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
-/* Pull quote: reduce padding/size on mobile */
-@media (max-width: 600px) {
+/* Leaderboard expanded content on mobile */
+@media (max-width: 768px) {
+  .leaderboard-expand-content {
+    padding: 1.5rem 1rem 2rem 1rem;
+  }
+}
+
+/* Typography reductions for small phones */
+@media (max-width: 480px) {
+  .title-large {
+    font-size: 2.2rem !important;
+    letter-spacing: -0.02em;
+  }
+  .title-medium {
+    font-size: 1.5rem !important;
+  }
+  .title-small {
+    font-size: 1.15rem !important;
+  }
   .pull-quote {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     padding-left: 1rem;
   }
-  .title-large {
-    font-size: clamp(2rem, 10vw, 3.5rem) !important;
+  p {
+    font-size: 0.95rem;
+  }
+  .subtitle-large {
+    font-size: 0.9rem !important;
   }
 }
 
-/* Browser mockup slider navigation: smaller on mobile */
+/* Browser mockup: smaller on very small phones */
 @media (max-width: 480px) {
   .browser-content {
     height: 220px;
@@ -874,9 +926,21 @@ p {
   }
 }
 
-/* Ensure code/keyword tags wrap properly */
-@media (max-width: 600px) {
+/* Word-break safety for tags, code, and long words */
+@media (max-width: 768px) {
   code {
     word-break: break-all;
+  }
+  .card-competitor,
+  .hero-defensible-card {
+    padding: 1.25rem;
+  }
+  /* Prevent any child from overflowing viewport */
+  main {
+    overflow-x: hidden;
+    min-width: 0;
+  }
+  main * {
+    min-width: 0;
   }
 }
