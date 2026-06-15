@@ -127,7 +127,7 @@ export const Leaderboard: React.FC = () => {
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     style={{ overflow: 'hidden', backgroundColor: 'var(--bg-secondary)' }}
                   >
-                    <div style={{ padding: '2rem 5rem 3rem 5rem' }}>
+                    <div className="leaderboard-expand-content">
                       <div className="leaderboard-expand-grid">
                         <div>
                           <h4 style={{ 
@@ -165,7 +165,7 @@ export const Leaderboard: React.FC = () => {
                           </p>
                         </div>
                         
-                        <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '2rem' }}>
+                        <div className="leaderboard-channels-col">
                           <h4 style={{ 
                             fontFamily: 'var(--font-sans)', 
                             textTransform: 'uppercase', 

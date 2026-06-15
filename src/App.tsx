@@ -137,9 +137,9 @@ const App: React.FC = () => {
       <div className="editorial-grid" style={{ marginTop: '3rem' }}>
         {/* Navigation Sidebar */}
         <aside className="sidebar-sticky">
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+          <div className="sidebar-inner">
             <div>
-              <span className="label-meta" style={{ display: 'block', marginBottom: '1.5rem' }}>Contents</span>
+              <span className="label-meta toc-title" style={{ display: 'block', marginBottom: '1.5rem' }}>Contents</span>
               <ul className="toc-list">
                 {navItems.map(item => (
                   <li key={item.id} className="toc-item">
@@ -154,13 +154,7 @@ const App: React.FC = () => {
               </ul>
             </div>
             
-            <div style={{ 
-              borderTop: '1px solid var(--border)', 
-              paddingTop: '1.5rem', 
-              fontSize: '0.75rem', 
-              color: 'var(--text-muted)',
-              lineHeight: '1.5' 
-            }}>
+            <div className="sidebar-config">
               <span className="label-meta" style={{ fontSize: '0.65rem', display: 'block', marginBottom: '0.5rem' }}>Config</span>
               Framework: Vite + React + TS<br />
               Design: Custom Vanilla CSS<br />

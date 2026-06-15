@@ -400,7 +400,8 @@ export const DeepDives: React.FC = () => {
             justifyContent: 'center', 
             gap: '1rem', 
             marginTop: '1rem',
-            alignItems: 'center'
+            alignItems: 'center',
+            flexWrap: 'wrap'
           }}>
             {activePages.length > 1 ? (
               activePages.map((page, idx) => (

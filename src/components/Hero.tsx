@@ -47,15 +47,7 @@ export const Hero: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ 
-              backgroundColor: 'var(--bg-secondary)', 
-              padding: '3rem', 
-              borderRadius: '8px',
-              border: '1px solid var(--border)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}
+            className="hero-defensible-card"
           >
             <div>
               <span className="label-meta" style={{ color: 'var(--text-secondary)' }}>Core Strategy</span>
