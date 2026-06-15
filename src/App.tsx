@@ -5,6 +5,7 @@ import { Leaderboard } from './components/Leaderboard';
 import { Matrix } from './components/Matrix';
 import { DeepDives } from './components/DeepDives';
 import { SEOStrategy } from './components/SEOStrategy';
+import { AdditionalImprovements } from './components/AdditionalImprovements';
 import { Footer } from './components/Footer';
 import { Sun, Moon, ArrowUp } from 'lucide-react';
 
@@ -15,7 +16,8 @@ const navItems = [
   { id: 'matrix', label: '04. Snapshots Matrix' },
   { id: 'deepdives', label: '05. Competitor Profiles' },
   { id: 'strategy', label: '06. Search Strategy' },
-  { id: 'sources', label: '07. References' }
+  { id: 'improvements', label: '07. Actionable Roadmap' },
+  { id: 'sources', label: '08. References' }
 ];
 
 const App: React.FC = () => {
@@ -175,6 +177,7 @@ const App: React.FC = () => {
           <Matrix />
           <DeepDives />
           <SEOStrategy />
+          <AdditionalImprovements />
           <Footer />
         </main>
       </div>
