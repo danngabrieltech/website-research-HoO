@@ -224,14 +224,32 @@ const competitorPages: Record<string, PageScreenshot[]> = {
 export const DeepDives: React.FC = () => {
   const [activeTab, setActiveTab] = useState(competitors[0].id);
   const [activePageIndex, setActivePageIndex] = useState(0);
+  const [isImageLoading, setIsImageLoading] = useState(true);
 
   const activeComp = competitors.find(c => c.id === activeTab) || competitors[0];
   const activePages = competitorPages[activeComp.id] || [];
   const currentPage = activePages[activePageIndex] || activePages[0];
 
+  // Preload all WebP screenshots in the background after a brief delay
+  // so they load instantly when clicked
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      Object.values(screenshotMap).forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    }, 1500); // 1.5s delay to let the initial critical resources finish first
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     setActivePageIndex(0);
+    setIsImageLoading(true);
   }, [activeTab]);
+
+  useEffect(() => {
+    setIsImageLoading(true);
+  }, [activePageIndex]);
 
   const handlePrevPage = () => {
     setActivePageIndex(prev => (prev === 0 ? activePages.length - 1 : prev - 1));
@@ -300,10 +318,17 @@ export const DeepDives: React.FC = () => {
             
             {/* Visual Slider Content */}
             <div className="browser-content" style={{ position: 'relative' }}>
+              {isImageLoading && (
+                <div className="screenshot-loader">
+                  <div className="spinner"></div>
+                </div>
+              )}
               <img 
                 src={currentPage ? screenshotMap[currentPage.id] : ''} 
                 alt={`${activeComp.name} ${currentPage ? currentPage.label : 'website'} preview`}
                 className="browser-screenshot-img"
+                onLoad={() => setIsImageLoading(false)}
+                style={{ opacity: isImageLoading ? 0.3 : 1, transition: 'opacity 0.2s ease-in-out' }}
               />
 
               {/* Slide controls (only visible if more than 1 page exists) */}
